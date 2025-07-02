@@ -579,7 +579,7 @@
                             <div class="example-block">
                                 <h4>Пример:</h4>
                                 <div class="code-block">
-                                    <code>for (int i = 0; i < 5; i++)</code>
+                                    <code>for (int i = 0; i < 5; i = i + 1)</code>
                                     <code>    say "Шаг " + i</code>
                                     <code>    wait "10"</code>
                                 </div>
@@ -608,7 +608,7 @@
                             <div class="code-block">
                                 <code>// Скрипт для автоматической добычи блоков</code>
                                 <code>int "blocks" = "0"</code>
-                                <code>for (int i = 0; i < 10; i++)</code>
+                                <code>for (int i = 0; i < 10; i = i + 1)</code>
                                 <code>    breakBlock</code>
                                 <code>    wait "5"</code>
                                 <code>    run "1"</code>
@@ -644,7 +644,7 @@
                             <div class="code-block">
                                 <code>// Скрипт для строительства стены</code>
                                 <code>setHotBar "1"</code>
-                                <code>for (int i = 0; i < 5; i++)</code>
+                                <code>for (int i = 0; i < 5; i = i + 1)</code>
                                 <code>    clickRight</code>
                                 <code>    wait "2"</code>
                                 <code>    run "1"</code>
