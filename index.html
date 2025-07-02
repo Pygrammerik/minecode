@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineCode - Автоматизация Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-text">MineCode</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#download">Скачать</a>
+                <a href="docs.html">Документация</a>
+                <a href="#about">О проекте</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Автоматизируй</span>
+                        <span class="title-line">свой Minecraft</span>
+                    </h1>
+                    <p class="hero-description">
+                        Создавай скрипты для автоматизации любых действий в игре. 
+                        Простой синтаксис, мощные возможности.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn-primary">
+                            <span class="btn-icon">⬇️</span>
+                            Скачать мод
+                        </a>
+                        <a href="docs.html" class="btn-secondary">
+                            <span class="btn-icon">📖</span>
+                            Документация
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">script.mc</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line"><span class="code-keyword">for</span> (<span class="code-var">int</span> i = 0; i < 10; i++)</div>
+                            <div class="code-line indent"><span class="code-func">breakBlock</span>()</div>
+                            <div class="code-line indent"><span class="code-func">wait</span>(<span class="code-number">5</span>)</div>
+                            <div class="code-line indent"><span class="code-func">run</span>(<span class="code-number">1</span>)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Скачать MineCode</h2>
+                    <p>Выберите нужную версию и начните автоматизацию</p>
+                </div>
+                
+                <div class="download-grid">
+                    <div class="download-item">
+                        <div class="download-icon">🎮</div>
+                        <h3>MineCode Mod</h3>
+                        <p>Основной мод для Minecraft</p>
+                        <div class="download-meta">
+                            <span class="meta-item">2.5 MB</span>
+                            <span class="meta-item">JAR</span>
+                            <span class="meta-item">v1.0.0</span>
+                        </div>
+                        <button class="download-button">
+                            <span class="download-text">Скачать</span>
+                            <span class="download-arrow">→</span>
+                        </button>
+                        <div class="requirements">
+                            <h4>Требования:</h4>
+                            <ul>
+                                <li>Minecraft 1.21</li>
+                                <li>Fabric</li>
+                                <li>Java 17+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Почему MineCode?</h2>
+                    <p>Все преимущества нашего мода</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Быстрый старт</h3>
+                        <p>Начните создавать скрипты за 5 минут</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Простой синтаксис</h3>
+                        <p>Легкий в изучении язык программирования</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Высокая производительность</h3>
+                        <p>Оптимизированный движок для быстрой работы</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Безопасность</h3>
+                        <p>Безопасное выполнение без риска для игры</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Гибкость</h3>
+                        <p>Полный контроль над действиями игрока</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">📚</div>
+                        <h3>Документация</h3>
+                        <p>Подробная документация с примерами</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="usecases-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Что можно автоматизировать</h2>
+                    <p>Бесконечные возможности для автоматизации</p>
+                </div>
+                
+                <div class="usecases-grid">
+                    <div class="usecase-item">
+                        <div class="usecase-icon">⛏️</div>
+                        <h3>Добыча ресурсов</h3>
+                        <p>Автоматическая добыча руды, камня и других ресурсов</p>
+                    </div>
+                    
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🏗️</div>
+                        <h3>Строительство</h3>
+                        <p>Автоматическое возведение зданий и сооружений</p>
+                    </div>
+                    
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🌾</div>
+                        <h3>Фермерство</h3>
+                        <p>Автоматические фермы для выращивания культур</p>
+                    </div>
+                    
+                    <div class="usecase-item">
+                        <div class="usecase-icon">⚔️</div>
+                        <h3>Боевые действия</h3>
+                        <p>Автоматизация боя и защиты от мобов</p>
+                    </div>
+                    
+                    <div class="usecase-item">
+                        <div class="usecase-icon">🔍</div>
+                        <h3>Исследование</h3>
+                        <p>Автоматическое исследование мира и картографирование</p>
+                    </div>
+                    
+                    <div class="usecase-item">
+                        <div class="usecase-icon">📦</div>
+                        <h3>Сортировка</h3>
+                        <p>Автоматическая сортировка предметов и ресурсов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>О проекте MineCode</h2>
+                        <p>
+                            MineCode — это инновационный мод для Minecraft, который открывает 
+                            новые возможности для автоматизации игрового процесса. Созданный 
+                            разработчиком <strong>trivait</strong>, мод предоставляет простой и мощный 
+                            инструмент для создания скриптов.
+                        </p>
+                        <p>
+                            Наша цель — сделать автоматизацию доступной для всех игроков, 
+                            независимо от уровня программирования. Простой синтаксис, 
+                            подробная документация и активное сообщество помогут вам 
+                            быстро освоить все возможности мода.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Скриптов создано</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Команд API</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Поддержка</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="stats-card">
+                            <div class="stats-header">
+                                <h3>Статистика проекта</h3>
+                            </div>
+                            <div class="stats-content">
+                                <div class="stat-bar">
+                                    <span class="stat-name">Производительность</span>
+                                    <div class="stat-progress">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="stat-value">95%</span>
+                                </div>
+                                <div class="stat-bar">
+                                    <span class="stat-name">Простота использования</span>
+                                    <div class="stat-progress">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                    <span class="stat-value">90%</span>
+                                </div>
+                                <div class="stat-bar">
+                                    <span class="stat-name">Функциональность</span>
+                                    <div class="stat-progress">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="stat-value">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">⚡</span>
+                    <span class="brand-text">MineCode</span>
+                    <p>Автоматизация Minecraft</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Продукт</h4>
+                        <a href="#download">Скачать</a>
+                        <a href="docs.html">Документация</a>
+                        <a href="#about">О проекте</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <a href="#">Discord</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Сообщество</h4>
+                        <a href="#">Форум</a>
+                        <a href="#">Примеры</a>
+                        <a href="#">Блог</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MineCode. Мод создан <strong>trivait</strong>. Сайт разработан <strong>Sooshka</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

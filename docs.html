@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineCode - Документация API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-text"><a href="index.html" style="color: inherit; text-decoration: none;">MineCode</a></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="#variables">Переменные</a>
+                <a href="#actions">Действия</a>
+                <a href="#movement">Движение</a>
+                <a href="#interaction">Взаимодействие</a>
+                <a href="#camera">Камера</a>
+                <a href="#player">Игрок</a>
+                <a href="#logic">Логика</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Документация API</span>
+                    </h1>
+                    <p class="hero-description">
+                        Полное описание всех команд и функций MineCode для создания скриптов. 
+                        Изучите синтаксис и создавайте мощные автоматизации.
+                    </p>
+                    <div class="hero-info">
+                        <span class="version-badge">API 1.0.0</span>
+                        <span class="minecraft-version">Minecraft 1.21</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">example.mc</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line"><span class="code-keyword">int</span> <span class="code-var">"health"</span> = <span class="code-number">"20"</span></div>
+                            <div class="code-line"><span class="code-keyword">say</span> <span class="code-string">"Привет!"</span></div>
+                            <div class="code-line"><span class="code-keyword">for</span> (<span class="code-var">int</span> i = 0; i < 5; i++)</div>
+                            <div class="code-line indent"><span class="code-func">breakBlock</span>()</div>
+                            <div class="code-line indent"><span class="code-func">wait</span>(<span class="code-number">5</span>)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Variables Section -->
+        <section id="variables" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Переменные</h2>
+                    <p>Основные типы переменных для хранения данных в скриптах MineCode</p>
+                </div>
+                
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>int - Целое число</h3>
+                            <span class="docs-badge">Числовой тип</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>int "имя" = "число"</code>
+                            </div>
+                            <p>Переменная содержащая целое число</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>int "health" = "20"</code>
+                                    <code>int "blocks" = "64"</code>
+                                    <code>int "count" = "0"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>string - Строка</h3>
+                            <span class="docs-badge">Текстовый тип</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>string "имя" = "текст"</code>
+                            </div>
+                            <p>Переменная содержащая текст</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>string "message" = "Привет, мир!"</code>
+                                    <code>string "playerName" = "Steve"</code>
+                                    <code>string "status" = "Работает"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>bool - Логическое значение</h3>
+                            <span class="docs-badge">Булевый тип</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>bool "имя" = "true/false"</code>
+                            </div>
+                            <p>Переменная содержащая true или false</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>bool "isAlive" = "true"</code>
+                                    <code>bool "hasArmor" = "false"</code>
+                                    <code>bool "isRunning" = "true"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>Block - Блок</h3>
+                            <span class="docs-badge">Блочный тип</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>Block "имя" = "id блока"</code>
+                            </div>
+                            <p>Переменная содержащая id блока</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>Block "stone" = "1"</code>
+                                    <code>Block "diamond" = "57"</code>
+                                    <code>Block "wood" = "17"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions Section -->
+        <section id="actions" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Действия</h2>
+                    <p>Основные команды для выполнения действий в игре</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>say - Отправка сообщения</h3>
+                            <span class="docs-badge">Чат</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>say "сообщение"</code>
+                            </div>
+                            <p>Выводит сообщение в чат игроку</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>say "Привет, мир!"</code>
+                                    <code>say "Скрипт выполнен!"</code>
+                                    <code>say "Добыто блоков: " + blocks</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>wait - Ожидание</h3>
+                            <span class="docs-badge">Время</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>wait "число"</code>
+                            </div>
+                            <p>Ожидание (в десятых секунды)</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>wait "10"  // 1 секунда</code>
+                                    <code>wait "50"  // 5 секунд</code>
+                                    <code>wait "100" // 10 секунд</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>jump - Прыжок</h3>
+                            <span class="docs-badge">Движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>jump</code>
+                            </div>
+                            <p>Прыжок игрока</p>
+                            <div class="example-block">
+                                <h4>Пример:</h4>
+                                <div class="code-block">
+                                    <code>jump</code>
+                                    <code>wait "5"</code>
+                                    <code>jump</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>follow - Слежка</h3>
+                            <span class="docs-badge">AI</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>follow "число"</code>
+                            </div>
+                            <p>Слежка за существом на которое смотрел (в секундах)</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>follow "30"  // Следить 30 секунд</code>
+                                    <code>follow "60"  // Следить 1 минуту</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movement Section -->
+        <section id="movement" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Движение</h2>
+                    <p>Команды для управления движением игрока</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>run - Ходьба</h3>
+                            <span class="docs-badge">Движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>run "число"</code>
+                            </div>
+                            <p>Пройти указанное количество блоков вперед</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>run "10"  // Пройти 10 блоков</code>
+                                    <code>run "1"   // Пройти 1 блок</code>
+                                    <code>run "50"  // Пройти 50 блоков</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>run.sprint - Бег</h3>
+                            <span class="docs-badge">Быстрое движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>run.sprint "число"</code>
+                            </div>
+                            <p>Пробежать указанное количество блоков</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>run.sprint "20"  // Пробежать 20 блоков</code>
+                                    <code>run.sprint "5"   // Пробежать 5 блоков</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>run.right - Движение вправо</h3>
+                            <span class="docs-badge">Боковое движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>run.right "число"</code>
+                            </div>
+                            <p>Пройти вправо указанное количество блоков</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>run.left - Движение влево</h3>
+                            <span class="docs-badge">Боковое движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>run.left "число"</code>
+                            </div>
+                            <p>Пройти влево указанное количество блоков</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>run.back - Движение назад</h3>
+                            <span class="docs-badge">Обратное движение</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>run.back "число"</code>
+                            </div>
+                            <p>Пройти назад указанное количество блоков</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interaction Section -->
+        <section id="interaction" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Взаимодействие</h2>
+                    <p>Команды для взаимодействия с миром</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>clickLeft - Левый клик</h3>
+                            <span class="docs-badge">Мышь</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>clickLeft</code>
+                            </div>
+                            <p>Имитирует левый клик мыши</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>clickRight - Правый клик</h3>
+                            <span class="docs-badge">Мышь</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>clickRight</code>
+                            </div>
+                            <p>Имитирует правый клик мыши</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>breakBlock - Разрушение блока</h3>
+                            <span class="docs-badge">Добыча</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>breakBlock</code>
+                            </div>
+                            <p>Разрушает блок на который смотрит игрок</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Camera Section -->
+        <section id="camera" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Управление камерой</h2>
+                    <p>Команды для управления камерой игрока</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>cameraRotation - Поворот камеры</h3>
+                            <span class="docs-badge">Камера</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>cameraRotation "число" "число"</code>
+                            </div>
+                            <p>Добавляет к текущему положению камеры значения</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>cameraRotation "90" "0"   // Повернуть на 90° вправо</code>
+                                    <code>cameraRotation "0" "45"    // Поднять камеру на 45°</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>setCameraRotation - Установка камеры</h3>
+                            <span class="docs-badge">Камера</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>setCameraRotation "число" "число"</code>
+                            </div>
+                            <p>Устанавливает камеру в определённое направление</p>
+                            <div class="example-block">
+                                <h4>Примеры:</h4>
+                                <div class="code-block">
+                                    <code>setCameraRotation "180" "0"  // Смотреть назад</code>
+                                    <code>setCameraRotation "0" "90"     // Смотреть вверх</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Player Section -->
+        <section id="player" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Информация об игроке</h2>
+                    <p>Переменные для получения информации об игроке</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>player.underBlock - Блок под игроком</h3>
+                            <span class="docs-badge">Информация</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>player.underBlock</code>
+                            </div>
+                            <p>Возвращает блок на котором стоит игрок</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>player.targetBlock - Целевой блок</h3>
+                            <span class="docs-badge">Информация</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>player.targetBlock</code>
+                            </div>
+                            <p>Возвращает блок на который смотрит игрок</p>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>player.health - Здоровье</h3>
+                            <span class="docs-badge">Здоровье</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>player.health</code>
+                            </div>
+                            <p>Возвращает текущее здоровье игрока</p>
+                            <div class="example-block">
+                                <h4>Пример:</h4>
+                                <div class="code-block">
+                                    <code>if (player.health < 10)</code>
+                                    <code>    say "Мало здоровья!"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logic Section -->
+        <section id="logic" class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Логические конструкции</h2>
+                    <p>Конструкции для создания условной логики и циклов</p>
+                </div>
+
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>if - Условный блок</h3>
+                            <span class="docs-badge">Условие</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>if (условие)</code>
+                            </div>
+                            <p>Начинает условный блок</p>
+                            <div class="example-block">
+                                <h4>Пример:</h4>
+                                <div class="code-block">
+                                    <code>if (player.health < 10)</code>
+                                    <code>    say "Мало здоровья!"</code>
+                                    <code>    wait "10"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>else - Альтернативный блок</h3>
+                            <span class="docs-badge">Условие</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>else</code>
+                            </div>
+                            <p>Альтернативный блок после if</p>
+                            <div class="example-block">
+                                <h4>Пример:</h4>
+                                <div class="code-block">
+                                    <code>if (player.health < 10)</code>
+                                    <code>    say "Мало здоровья!"</code>
+                                    <code>else</code>
+                                    <code>    say "Здоровье в порядке!"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="docs-card">
+                        <div class="docs-card-header">
+                            <h3>for - Цикл</h3>
+                            <span class="docs-badge">Цикл</span>
+                        </div>
+                        <div class="docs-card-content">
+                            <div class="code-block">
+                                <code>for (int; условие; действие)</code>
+                            </div>
+                            <p>Создает цикл</p>
+                            <div class="example-block">
+                                <h4>Пример:</h4>
+                                <div class="code-block">
+                                    <code>for (int i = 0; i < 5; i++)</code>
+                                    <code>    say "Шаг " + i</code>
+                                    <code>    wait "10"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section class="docs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Полные примеры скриптов</h2>
+                    <p>Готовые примеры скриптов для различных задач</p>
+                </div>
+
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-card-header">
+                            <h3>Автоматическая добыча</h3>
+                            <span class="example-badge">Добыча</span>
+                        </div>
+                        <div class="example-card-content">
+                            <div class="code-block">
+                                <code>// Скрипт для автоматической добычи блоков</code>
+                                <code>int "blocks" = "0"</code>
+                                <code>for (int i = 0; i < 10; i++)</code>
+                                <code>    breakBlock</code>
+                                <code>    wait "5"</code>
+                                <code>    run "1"</code>
+                                <code>    int "blocks" = "blocks" + 1</code>
+                                <code>    say "Добыто блоков: " + blocks</code>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-card-header">
+                            <h3>Проверка здоровья</h3>
+                            <span class="example-badge">Мониторинг</span>
+                        </div>
+                        <div class="example-card-content">
+                            <div class="code-block">
+                                <code>// Скрипт для мониторинга здоровья</code>
+                                <code>if (player.health < 10)</code>
+                                <code>    say "ВНИМАНИЕ: Мало здоровья!"</code>
+                                <code>    say "Текущее здоровье: " + player.health</code>
+                                <code>else</code>
+                                <code>    say "Здоровье в норме: " + player.health</code>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-card-header">
+                            <h3>Автоматическое строительство</h3>
+                            <span class="example-badge">Строительство</span>
+                        </div>
+                        <div class="example-card-content">
+                            <div class="code-block">
+                                <code>// Скрипт для строительства стены</code>
+                                <code>setHotBar "1"</code>
+                                <code>for (int i = 0; i < 5; i++)</code>
+                                <code>    clickRight</code>
+                                <code>    wait "2"</code>
+                                <code>    run "1"</code>
+                                <code>    say "Построен блок " + (i + 1)</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">⚡</span>
+                    <span class="brand-text">MineCode</span>
+                    <p>Автоматизация Minecraft</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Документация</h4>
+                        <a href="#variables">Переменные</a>
+                        <a href="#actions">Действия</a>
+                        <a href="#movement">Движение</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <a href="#">Discord</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Сообщество</h4>
+                        <a href="#">Форум</a>
+                        <a href="#">Примеры</a>
+                        <a href="#">Блог</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MineCode. Мод создан <strong>trivait</strong>. Сайт разработан <strong>Sooshka</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
